@@ -11,17 +11,35 @@
 
 .lift {
     border: 1px solid black;
-    background-color: gray   
+    background-color: gray  ;
+    transition: transform 2s ease-out;
+    overflow: hidden;
 }
 .left-door {
-    transition : 'all 1s ease-out';
+    transition: transform 2.5s ease-out;
+    background-color: yellow;
+    width: 1.9rem;
+    height: 6rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-right: 2px solid;
 }
 .right-door {
-    transition : 'all 1s ease-out';
-}
-.lift-panel {
+    transition: transform 2.5s ease-out;
     background-color: yellow;
-    transition : 'all 1s ease-out';
+    width: 1.9rem;
+    height: 6rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-left: 2px solid;
+}
+.open-left-door {
+    transform: translateX(-100%);
+}
+.open-right-door {
+    transform: translateX(100%);
 }
 .z-1 {
     z-index: 1;
@@ -29,17 +47,25 @@
 .z-2 {
     z-index: 2;
 }
-.py-2_5 {
-    padding-top: 2.5rem;
-    padding-bottom: 2.5rem;
+.py-3 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
 }
-.px-1_5 {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+.px-2 {
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
-
 .flex {
     display: flex;
+}
+.flex-col {
+    flex-direction: column;
+}
+.justify-center {
+    justify-content: center;
+}
+.m-0-1 {
+    margin: 0.1rem;
 }
 .mt-1 {
     margin-top: 1rem;
@@ -47,6 +73,12 @@
 .ml-1 {
     margin-left: 1rem;
 }
+.mb-0-5 {
+    margin-bottom: 0.5rem;
+}
 .floor {
     border-bottom: 1px solid black;
+}
+.relative {
+    position: relative;
 }
